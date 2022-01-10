@@ -5,8 +5,9 @@ A template for quickly getting started with forge
 ## Getting Started
 
 ```
+mkdir my-project
+cd my-project
 forge init --template https://github.com/FrankieIsLost/forge-template
-cd forge-template
 npm install ## install development dependencies
 forge build
 forge test
