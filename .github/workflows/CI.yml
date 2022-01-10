@@ -11,6 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
+      - name: Install dev dependencies
+        run: npm install
 
       - name: Install stable toolchain
         uses: actions-rs/toolchain@v1
@@ -19,19 +21,10 @@ jobs:
           toolchain: stable
           override: true
 
-      - uses: Swatinem/rust-cache@v1
-        with:
-          cache-on-failure: true
-
-      - name: Cache Forge
-        id: cache-forge
-        uses: actions/cache@v2
-        with:
-          path: ~/.cargo/bin/forge
-          key: cache-forge
+      - name: Set up rust cache
+        uses: Swatinem/rust-cache@v1
 
       - name: Install Forge
-        if: steps.cache-forge.outputs.cache-hit != 'true'
         run: |
           cargo install --git https://github.com/gakonst/foundry --bin forge --locked
 
