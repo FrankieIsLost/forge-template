@@ -30,6 +30,7 @@ jobs:
 
       - name: Cache Forge
         uses: actions/cache@v2
+        id: cache-forge
         env:
           cache-name: cache-forge
         with:
