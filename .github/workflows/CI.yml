@@ -26,8 +26,7 @@ jobs:
 
       - name: Save git SHA for Foundry
         run: |
-          echo "forge-sha=$(git ls-remote  https://github.com/gakonst/foundry HEAD 
-          | awk '{ print $1}')" >> $GITHUB_ENV
+          echo "forge-sha=$(git ls-remote  https://github.com/gakonst/foundry HEAD | awk '{ print $1}')" >> $GITHUB_ENV
 
       - name: Cache Forge
         uses: actions/cache@v2
