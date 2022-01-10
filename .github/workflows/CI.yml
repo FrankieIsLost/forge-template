@@ -11,8 +11,8 @@ jobs:
         with:
           toolchain: stable
 
-     - name: Install Forge
-       run: cargo install --git https://github.com/gakonst/foundry --bin forge --locked
+      - name: Install Forge
+        run: cargo install --git https://github.com/gakonst/foundry --bin forge --locked
 
-     - name: Forge version
-       run: forge --version
+      - name: Forge version
+        run: forge --version
