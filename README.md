@@ -14,15 +14,15 @@ forge test
 
 ## Features
 
-# Testing Utilities
+### Testing Utilities
 
 Includes common testing contracts like `Hevm.sol` and `User.sol`, as well as a `Utilities.sol` contract with common testing methods like creating users with an initial balance
 
-# Preinstalled dependencies
+### Preinstalled dependencies
 
 DSTest and Solmate are already installed
 
-# Linting
+### Linting
 
 Pre-configured `solhint` and `prettier-plugin-solidity`. Can be run by
 
@@ -31,6 +31,6 @@ npm run solhint
 npm run prettier
 ```
 
-# Default Configuration
+### Default Configuration
 
 Including `.gitignore`, `.vscode`, `remappings.txt`
