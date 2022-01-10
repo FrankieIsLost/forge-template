@@ -38,4 +38,4 @@ Including `.gitignore`, `.vscode`, `remappings.txt`
 
 ## Acknowledgement
 
-Inspired by great dapptools templates like https://github.com/gakonst/dapptools-template and https://github.com/transmissions11/dapptools-template
+Inspired by great dapptools templates like https://github.com/gakonst/forge-template, https://github.com/gakonst/dapptools-template and https://github.com/transmissions11/dapptools-template
