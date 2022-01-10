@@ -32,6 +32,10 @@ npm run solhint
 npm run prettier
 ```
 
+### CI with Github Actions
+
+Automatically run linting and tests on pull requests.
+
 ### Default Configuration
 
 Including `.gitignore`, `.vscode`, `remappings.txt`
