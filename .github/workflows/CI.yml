@@ -1,5 +1,10 @@
 name: CI
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
 jobs:
   run-ci:
     runs-on: ubuntu-latest
@@ -7,12 +12,31 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
 
-      - uses: actions-rs/toolchain@v1
+      - name: Install stable toolchain
+        uses: actions-rs/toolchain@v1
         with:
+          profile: minimal
           toolchain: stable
+          override: true
+
+      - uses: Swatinem/rust-cache@v1
+        with:
+          cache-on-failure: true
+
+      - name: Cache Forge
+        id: cache-forge
+        uses: actions/cache@v2
+        with:
+          path: ~/.cargo/bin/forge
+          key: cache-forge
 
       - name: Install Forge
-        run: cargo install --git https://github.com/gakonst/foundry --bin forge --locked
+        if: steps.cache-forge.outputs.cache-hit != 'true'
+        run: |
+          cargo install --git https://github.com/gakonst/foundry --bin forge --locked
 
-      - name: Forge version
-        run: forge --version
+      - name: Run lint check
+        run: npm run lint:check
+
+      - name: Run tests
+        run: forge test
