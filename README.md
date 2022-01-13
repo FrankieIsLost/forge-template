@@ -17,7 +17,7 @@ forge test
 
 ### Testing Utilities
 
-Includes common testing contracts like `Hevm.sol` and `User.sol`, as well as a `Utilities.sol` contract with common testing methods like creating users with an initial balance
+Includes common testing contracts like `Hevm.sol` and `Console.sol`, as well as a `Utilities.sol` contract with common testing methods like creating users with an initial balance
 
 ### Preinstalled dependencies
 
