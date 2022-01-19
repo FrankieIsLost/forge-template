@@ -8,6 +8,7 @@ A template for quickly getting started with forge
 mkdir my-project
 cd my-project
 forge init --template https://github.com/FrankieIsLost/forge-template
+git submodule update --init --recursive  ## initialize submodule dependencies
 npm install ## install development dependencies
 forge build
 forge test
