@@ -18,11 +18,11 @@ forge test
 
 ### Testing Utilities
 
-Includes common testing contracts like `Hevm.sol` and `Console.sol`, as well as a `Utilities.sol` contract with common testing methods like creating users with an initial balance
+Includes a `Utilities.sol` contract with common testing methods (like creating users with an initial balance), as well as various other utility contracts.
 
 ### Preinstalled dependencies
 
-`ds-test` and `solmate` are already installed
+`ds-test` for testing, `forge-std` for better cheatcode UX, and `solmate` for optimized contract implementations.  
 
 ### Linting
 
