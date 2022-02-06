@@ -3,5 +3,7 @@
     "solidity.formatter": "prettier",
     "[solidity]": {
         "editor.defaultFormatter": "JuanBlanco.solidity"
-    }
+    },
+    "solidity.packageDefaultDependenciesContractsDirectory": "src",
+    "solidity.packageDefaultDependenciesDirectory": "lib"
 }
