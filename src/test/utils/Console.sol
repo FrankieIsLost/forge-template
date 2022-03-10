@@ -179,8 +179,11 @@ library console {
     }
 
     function log(bytes32[] memory p0) internal view {
-        for (uint256 i; i < p0.length; ++i) {
-            _sendLogPayload(abi.encodeWithSignature("log(bytes32[])", p0));
+        for (uint256 i; i < p0.length;) {
+            _sendLogPayload(abi.encodeWithSignature("log(bytes32)", p0[i]));
+            unchecked {
+                ++i;
+            }
         }
     }
 
@@ -189,8 +192,11 @@ library console {
     }
 
     function log(uint256[] memory p0) internal view {
-        for (uint256 i; i < p0.length; ++i) {
-            _sendLogPayload(abi.encodeWithSignature("log(uint[])", p0));
+        for (uint256 i; i < p0.length;) {
+            _sendLogPayload(abi.encodeWithSignature("log(uint)", p0[i]));
+            unchecked {
+                ++i;
+            }
         }
     }
 
@@ -199,8 +205,11 @@ library console {
     }
 
     function log(string[] memory p0) internal view {
-        for (uint256 i; i < p0.length; ++i) {
-            _sendLogPayload(abi.encodeWithSignature("log(string[])", p0));
+        for (uint256 i; i < p0.length;) {
+            _sendLogPayload(abi.encodeWithSignature("log(string)", p0[i]));
+            unchecked {
+                ++i;
+            }
         }
     }
 
@@ -209,8 +218,11 @@ library console {
     }
 
     function log(bool[] memory p0) internal view {
-        for (uint256 i; i < p0.length; ++i) {
-            _sendLogPayload(abi.encodeWithSignature("log(bool[])", p0));
+        for (uint256 i; i < p0.length;) {
+            _sendLogPayload(abi.encodeWithSignature("log(bool)", p0[i]));
+            unchecked {
+                ++i;
+            }
         }
     }
 
@@ -219,8 +231,11 @@ library console {
     }
 
     function log(address[] memory p0) internal view {
-        for (uint256 i; i < p0.length; ++i) {
-            _sendLogPayload(abi.encodeWithSignature("log(address[])", p0));
+        for (uint256 i; i < p0.length; ) {
+            _sendLogPayload(abi.encodeWithSignature("log(address)", p0[i]));
+            unchecked {
+                ++i;
+            }
         }
     }
 
