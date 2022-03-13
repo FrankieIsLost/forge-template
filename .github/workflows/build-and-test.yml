@@ -2,7 +2,7 @@ name: Build and Test Contracts
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
 
 jobs:
@@ -22,7 +22,7 @@ jobs:
           version: nightly
 
       - name: Run lint check
-        run: npm run lint:check
+        run: make lint-check
 
       - name: Run tests
         run: make test

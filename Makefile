@@ -1,5 +1,5 @@
 # deps
-all: update build
+all: update lint build
 update:; forge update
 
 # Build & test
@@ -8,3 +8,7 @@ test   :; forge clean && forge test --optimize --optimize-runs 1000000 -v # - f-
 trace   :; forge clean && forge test --optimize --optimize-runs 1000000 -vvv # --ffi # enable if you need the `ffi` cheat code on HEVM
 clean  :; forge clean
 snapshot :; forge clean && forge snapshot --optimize --optimize-runs 1000000
+
+# Lint
+lint :; npm run lint
+lint-check :; npm run lint:check
