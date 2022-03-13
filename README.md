@@ -1,17 +1,17 @@
 # Forge Template
 
-A template for quickly getting started with forge
+A template for quickly getting started with forge. Inspired by: https://github.com/FrankieIsLost/forge-template
 
 ## Getting Started
 
 ```
 mkdir my-project
 cd my-project
-forge init --template https://github.com/FrankieIsLost/forge-template
+forge init --template https://github.com/itsdevbear/forge-template
 git submodule update --init --recursive  ## initialize submodule dependencies
 npm install ## install development dependencies
-forge build
-forge test
+make all
+make test
 ```
 
 ## Features

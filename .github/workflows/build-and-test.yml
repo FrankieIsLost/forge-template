@@ -1,4 +1,4 @@
-name: CI
+name: Build and Test Contracts
 on:
   push:
     branches:
@@ -25,4 +25,4 @@ jobs:
         run: npm run lint:check
 
       - name: Run tests
-        run: forge test
+        run: make test
