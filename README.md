@@ -10,8 +10,8 @@ cd my-project
 forge init --template https://github.com/FrankieIsLost/forge-template
 git submodule update --init --recursive  ## initialize submodule dependencies
 npm install ## install development dependencies
-forge build
-forge test
+make build
+make test
 ```
 
 ## Features
@@ -29,8 +29,8 @@ Includes a `Utilities.sol` contract with common testing methods (like creating u
 Pre-configured `solhint` and `prettier-plugin-solidity`. Can be run by
 
 ```
-npm run solhint
-npm run prettier
+make solhint
+make prettier
 ```
 
 ### CI with Github Actions
@@ -39,7 +39,7 @@ Automatically run linting and tests on pull requests.
 
 ### Default Configuration
 
-Including `.gitignore`, `.vscode`, `remappings.txt`
+Including `.gitignore`, `.vscode`, `foundry.toml`
 
 ## Acknowledgement
 
